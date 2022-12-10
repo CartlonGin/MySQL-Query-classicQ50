@@ -133,5 +133,21 @@ insert into Score values('07' , '02' , 89);
 insert into Score values('07' , '03' , 98);
 ```
 ## 2. Query
-MySQL 的語法處理順序大致上為：FROM > WHERE > GROUP BY > HAVING > SELECT > ORDER BY > LIMIT
-* 完整語法請看 Q50code.sql
+MySQL 的語法處理順序大致上為：```FROM``` > ```WHERE``` > ```GROUP BY``` > ```HAVING``` > ```SELECT``` > ```ORDER BY``` > ```LIMIT```
+* 完整語法請看 https://github.com/CartlonGin/MySQL-classicQ50/blob/fffd17a2cc335b140523cbd989bbaf98503c8bc3/Q50code.sql
+* 一些筆記，前方數字為題號：
+12. 題目要求完全相同：不只一筆資料，所以是一個list，用 ```GROUP_CONCAT```
+17. ```sum(case when column1 = ’value1’ then 1 else 0 end)```，如果欄位值有’value1’，則case回傳1給sum，沒有則回傳0，sum則加1，可以用在取得在特定欄位中有多少列有value1
+18. 排序問題解法： 
+	  Online Analytical Processing 窗口函數
+	    <窗口函数/聚合函數> over (partition by <用來分组的列名> #partition分組不會改變行數 #group分組會改變行數
+                                order by <用來排序的列名>)
+	   <ex> 每個班級內按照成績排名
+	   ```js
+     select *,
+     rank() over (partition by 班級 order by 成績 desc) as ranking
+     from 班级表 
+     ```
+20. ```set @rank := 0;```  #外部宣告好處在於如果沒執行到宣告，下方程式碼不會出錯只會顯示NULL，可 ```=``` or ```:=``` ，
+	  ```select Q20.*, @rank := @rank +1 as `rank` ```，select 的賦值一定要是 ```:=```，此句意思為此變數@rank經歷每筆資料後都會加1
+
