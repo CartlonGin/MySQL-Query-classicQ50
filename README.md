@@ -134,4 +134,4 @@ insert into Score values('07' , '03' , 98);
 ```
 ## 2. Query
 MySQL 的語法處理順序大致上為：FROM > WHERE > GROUP BY > HAVING > SELECT > ORDER BY > LIMIT
-* 完整語法請看 
+* 完整語法請看 Q50code.sql
