@@ -58,8 +58,7 @@ This is a basic practice of MySQL, including 50 questions of the query. It is he
 ```
 ---
 ## 1. Database
-* #### 建立資料表架構
-首先要先建立4張表，分別是：學生(Student)、課程(Course)、教師(Teacher)、成績(Score)，並建立關聯。（ps.各個表與資料類別的縮寫與可依照自己習慣設定）
+* #### 建立資料表架構：首先要先建立4張表，分別是：學生(Student)、課程(Course)、教師(Teacher)、成績(Score)，並建立關聯。（ps.各個表與資料類別的縮寫與可依照自己習慣設定）
 ```js
 CREATE TABLE `Student`(
 `Sid` VARCHAR(20),
@@ -89,10 +88,9 @@ CREATE TABLE `Score`(
 PRIMARY KEY(`Sid`,`Cid`)
 );
 ```
-* #### 輸入資料
-用```insert```將各個資料輸入進去各個表中。（ps. 資料內容也可以自行調整)
+* #### 輸入資料：用```insert```將各個資料輸入進去各個表中。（ps. 資料內容也可以自行調整)
+
 ```js
--- Student data
 insert into Student values('01' , '趙雷' , '1990-01-01' , '男');
 insert into Student values('02' , '錢電' , '1990-12-21' , '男');
 insert into Student values('03' , '孫風' , '1990-05-20' , '男');
@@ -102,17 +100,16 @@ insert into Student values('06' , '吳蘭' , '1992-03-01' , '女');
 insert into Student values('07' , '鄭竹' , '1989-07-01' , '女');
 insert into Student values('08' , '王菊' , '1990-01-20' , '女');
 
--- Course data
 insert into Course values('01' , '語文' , '02');
 insert into Course values('02' , '數學' , '01');
 insert into Course values('03' , '英語' , '03');
 
--- Teacher data
+
 insert into Teacher values('01' , '張三');
 insert into Teacher values('02' , '李四');
 insert into Teacher values('03' , '王五');
 
--- Score data
+
 insert into Score values('01' , '01' , 80);
 insert into Score values('01' , '02' , 90);
 insert into Score values('01' , '03' , 99);
