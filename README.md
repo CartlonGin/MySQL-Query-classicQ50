@@ -1,6 +1,6 @@
 # MySQL-ClassicQ50
 
-MySQL 的經典50題練習，有助於培養基本的資料庫查詢觀念與邏輯培養，也可以當成基本的查詢工具書，對於新手來說是很好的練習機會！我也將自己練習的語法和筆記記錄在此，提供正在練習的人一些語法分享，任何問題非常歡迎交流！
+MySQL 的經典50題練習，有助於培養基本的資料庫查詢觀念與邏輯培養，也可以當成基本的查詢工具書。
 This is a basic practice of MySQL, including 50 questions of the query. It is helpful for new hands of MySQL to build the logic of database queries.
 
 * ### 50 Questions:
